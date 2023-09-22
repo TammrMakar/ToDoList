@@ -12,13 +12,9 @@ import utils.CommonMethods;
 public class TodoTask extends CommonMethods {
 
     // Scenario 1: Navigate to the website and verify no ToDos
-    @Given("I am on to do app for the first time")
-    public void i_am_on_http_localhost_for_the_first_time() {
-
-    }
     @Then("I should see No ToDos")
     public void i_should_see_no_to_dos() {
-        String expected="No ToDos";
+        String expected ="No Todos";
         String actual = driver.findElement(By.xpath("//p[@class='app_emptyText__11zUS']")).getText();
         Assert.assertEquals(expected,actual);
     }
@@ -34,7 +30,7 @@ public class TodoTask extends CommonMethods {
         Thread.sleep(5000);
     }
 
-
+    // Scenario 3: Create a ToDo
         @Given("I provide Title and Status")
         public void i_provide_title_and_status() {
 
@@ -64,8 +60,6 @@ public class TodoTask extends CommonMethods {
     }
 
     // Scenario 4: Click on Edit icon and verify the Update ToDo dialog
-
-
     @Given("I click on pencil icon")
     public void i_click_on_pencil_edit_icon() {
         WebElement editIcon = driver.findElement(By.xpath("(//div[@class='todoItem_icon__+DYyU'])[2]"));
@@ -73,8 +67,6 @@ public class TodoTask extends CommonMethods {
     }
 
     // Scenario 5: Update a ToDo
-
-
     @Given("I update the Title and Status")
     public void i_update_the_title_and_status() {
 
@@ -99,7 +91,6 @@ public class TodoTask extends CommonMethods {
     }
 
     // Scenario 6: Delete a ToDo
-
     @Given("I click on delete icon")
     public void i_click_on_delete_icon() {
 
