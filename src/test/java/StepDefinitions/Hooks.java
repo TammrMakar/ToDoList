@@ -12,6 +12,6 @@ public class Hooks extends CommonMethods {
     }
     @After
     public void terminateBrowser(){
-        CommonMethods.closeBrowser();
+       CommonMethods.closeBrowser();
     }
 }
